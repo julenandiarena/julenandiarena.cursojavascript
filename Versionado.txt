@@ -8,7 +8,6 @@
  * History:
  *  - v1.0.0 – Primera entrega (Aprobada)
  */
-
 alert("¡Hola! Este es el panel de registro de usuarios profesionales de C.A.S.L.");
 let nombreIngresado = prompt("Por favor ingrese su nombre y apellido");
 let dniIngresado = prompt("Ahora por favor ingrese su número de DNI");
@@ -25,7 +24,6 @@ alert(mensaje);
  * History:
  *  - v1.1.0 – Primera entrega (Aprobada)
  */
-
 let message;
 let name = prompt("Por favor ingrese su nombre y apellido");
 if ((name == null) || (name == "")){
@@ -46,5 +44,28 @@ console.log(name)
  * @fecha: 24/11/2021
  *
  * History:
- *  - v1.2.0 – Primera entrega (Aprobada)
+ *  - v1.2.0 – Primera entrega
  */
+let profesional = prompt("Por favor ingrese su nombre y apellido");
+while(profesional != "esc"){
+    switch (profesional){
+        case "Juan Perez":
+            alert("Bienvenido Juan Perez");
+            break;
+        case "Maria Lopez":
+            alert("Bienvenida Maria Lopez");
+            break;
+        default:
+            alert("Profesional no ingresado/a, por favor comunicarse a registros@casl.com.ar");
+            break;
+        }
+        let paciente = prompt("Ingrese datos de la historia clínica del paciente");
+        let historiaclinica = paciente;
+        let masdatoshc = " ";
+            while(masdatoshc != "esc"){
+                masdatoshc = prompt("Ingrese más datos de la historia clínica");
+                historiaclinica = historiaclinica + " " + masdatoshc;
+                console.log(historiaclinica);
+            }alert("Historia clínica ingresada o actualizada. Para repetir pulse 'Aceptar'. Para finalizar cierre la pestaña.")
+    
+    }
