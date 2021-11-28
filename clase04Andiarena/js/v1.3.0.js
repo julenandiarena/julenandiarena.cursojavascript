@@ -1,14 +1,4 @@
-function historiaclinica(){
-    let paciente = prompt("Ingrese datos de la historia clínica del paciente");
-    let hc = paciente;
-    let masdatoshc = " ";
-    while(masdatoshc != "esc"){
-        masdatoshc = prompt("Ingrese más datos de la historia clínica");
-        hc = hc + " " + masdatoshc;
-        console.log(hc);
-    }alert("Historia clínica ingresada o actualizada. Para repetir pulse 'Aceptar'. Para finalizar cierre la pestaña.")
-}
-
+function profesional(){
 let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
 while(profesional != null && profesional != ""){
     switch (profesional){
@@ -24,5 +14,17 @@ while(profesional != null && profesional != ""){
         }
         break
     }
+}
 
+function historiaclinica(){
+    let paciente = prompt("Ingrese nombre del paciente");
+    console.log(paciente)
+    let datoshc = " ";
+    while(datoshc != "esc"){
+        datoshc = prompt("Ingrese datos de la historia clínica del paciente. Pulse 'esc' para terminar.");
+        console.log(datoshc);
+    }alert("Historia clínica de " + paciente + " ingresada o actualizada. Para finalizar cierre la pestaña.")
+}
+
+profesional();
 historiaclinica();
