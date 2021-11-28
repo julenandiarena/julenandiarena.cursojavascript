@@ -44,7 +44,7 @@ console.log(name)
  * @fecha: 24/11/2021
  *
  * History:
- *  - v1.2.0 – Primera entrega
+ *  - v1.2.0 – Primera entrega (Aprobada)
  */
 let profesional = prompt("Por favor ingrese su nombre y apellido");
 while(profesional != "esc"){
@@ -69,3 +69,27 @@ while(profesional != "esc"){
             }alert("Historia clínica ingresada o actualizada. Para repetir pulse 'Aceptar'. Para finalizar cierre la pestaña.")
     
     }
+
+
+    /**
+ * @challenge: Simulador interactivo
+ * 
+ * @version: 1.3.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 27/11/2021
+ *
+ * History:
+ *  - v1.3.0 – Primera entrega 
+ */
+
+
+   /**
+ * @challenge: Funciones relacionadas
+ * 
+ * @version: 1.4.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 27/11/2021
+ *
+ * History:
+ *  - v1.4.0 – Primera entrega 
+ */
