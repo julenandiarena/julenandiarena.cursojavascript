@@ -151,6 +151,135 @@ alert("El valor individual de las patentes de su auto es $" + valorPatentesIndiv
  *  - v1.5.0 – Primera entrega 
  */
 
+function profesional(){
+    let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
+    while(profesional != null && profesional != ""){
+        switch (profesional){
+            case 14393827:
+                alert("Bienvenido a la web de CASL: Lic. Juan Pérez. Pulse 'Aceptar' para continuar.");
+                break
+            case 13764831:
+                alert("Bienvenida a la web de CASL: Lic. María López. Pulse 'Aceptar' para continuar.");
+                break
+            default:
+                alert("DNI no ingresado o inválido. Acceso denegado, por favor comunicarse a registros@casl.com.ar para completar el registro.");
+                continue
+            }
+            break
+        }
+    }
+
+profesional();
+
+function Paciente(name, surname, age, passport, adress, meds, medsNumber, diagnosis, clinicHistory) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+    this.passport = passport;
+     this.adress = adress;
+    this.meds = meds;
+    this.medsNumber = medsNumber;
+    this.diagnosis = diagnosis;
+    this.clinicHistory = clinicHistory;
+    }
+    
+const name = prompt("Ingrese NOMBRE del paciente:");
+const surname = prompt("Ingrese APELLIDO del paciente:");
+const age = parseInt(prompt("Ingrese EDAD del paciente:"));
+const passport = parseInt(prompt("Ingrese NÚMERO DE DNI del paciente:"));
+const adress = prompt("Ingrese DOMICILIO del paciente:");
+const meds = prompt("Ingrese OBRA SOCIAL del paciente:");
+const medsNumber = prompt("Ingrese NÚMERO DE OBRA SOCIAL del paciente:");
+const diagnosis = prompt("Ingrese DIAGNÓSTICO del paciente:");
+const clinicHistory = prompt("Ingrese HISTORIA CLÍNICA del paciente:");
+
+let paciente1 = new Paciente (name, surname, age, passport, adress, meds, medsNumber, diagnosis, clinicHistory);
+
+console.log("name" in paciente1);
+console.log("surname" in paciente1);
+console.log("age" in paciente1);
+console.log("passport" in paciente1);
+console.log("adress" in paciente1);
+console.log("meds" in paciente1);
+console.log("medsNumber" in paciente1);
+console.log("diagnosis" in paciente1);
+console.log("clinicHistory" in paciente1);
+console.log(paciente1);
+
+document.getElementById("name").innerHTML = paciente1.name;
+document.getElementById("surname").innerHTML = paciente1.surname;
+document.getElementById("age").innerHTML =  paciente1.age;
+document.getElementById("passport").innerHTML =  paciente1.passport;
+document.getElementById("adress").innerHTML = paciente1.adress;
+document.getElementById("meds").innerHTML = paciente1.meds;
+document.getElementById("medsNumber").innerHTML =  paciente1.medsNumber;
+document.getElementById("diagnosis").innerHTML =  paciente1.diagnosis;
+document.getElementById("clinicHistory").innerHTML =  paciente1.clinicHistory;
+
+ /**
+ * @challenge: Ordenar un array de objetos (Desafío complementario)
+ * 
+ * @version: 1.6.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 3/12/22021
+ *
+ * History:
+ *  - v1.6.0 – Primera entrega 
+ */
+ class Paciente{
+    constructor(name, surname, age, diagnosis) {
+    this.name = name;
+    this.surname = surname;
+    this.age = parseInt(age);
+    this.diagnosis = diagnosis;
+    }
+}
+
+const arrayPacientes = [];
+do{
+    var entradaNombre = prompt("Ingrese el nombre del paciente o 'esc' para terminar.");
+    if (entradaNombre === "esc" || entradaNombre === "ESC" || entradaNombre === "Esc"){
+        break;   
+    }else{
+        nombreP = entradaNombre;
+        var apellidoP = prompt("Ingrese apellido del paciente:");
+        var edadP = prompt("Ingrese edad del paciente:");
+        var diagnosticoP = prompt("Ingrese siglas o código del diagnóstico del paciente:");
+        arrayPacientes.push(new Paciente(nombreP, apellidoP, edadP, diagnosticoP));
+    }
+} 
+while (entradaNombre != "esc" || entradaNombre != "ESC" || entradaNombre != "Esc")
+console.log(arrayPacientes);
+
+for (var paciente of arrayPacientes){
+    document.write("<ul><li><h3>Nombre: " + paciente.name+ "</h3></li>");
+    document.write("<ul><li><h3>Apellido: " + paciente.surname + "</h3></li>");
+    document.write("<ul><li><h3>Edad: " + paciente.age + "</h3></li>");
+    document.write("<ul><li><h3>Diagnóstico: " + paciente.diagnosis + "</h3></li>");
+}
+
+var ordenadosEdad = [];
+ordenadosEdad = arrayPacientes.map(age => age);
+var ordenadosEdad = arrayPacientes;
+ordenadosEdad.sort(function(a, b){
+    return a.age - b.age;
+});
+console.log("Ordenados por Edad de menor a mayor:");
+console.log(ordenadosEdad);
+document.write("<h3> Lista de Pacientes ordenados por edad de menor a mayor: </h3>");
+
+
+
+ /**
+ * @challenge: Incorporar arrays
+ * 
+ * @version: 1.7.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 3/12/22021
+ *
+ * History:
+ *  - v1.7.0 – Primera entrega 
+ */
  function profesional(){
     let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
     while(profesional != null && profesional != ""){
@@ -171,47 +300,71 @@ alert("El valor individual de las patentes de su auto es $" + valorPatentesIndiv
 
 profesional();
 
-function Paciente(name, surname, age, passport, adress, meds, medsnumber, diagnosis, clinichistory) {
+class Paciente{
+    constructor(passport, name, surname, age, adress, meds, medsNumber, diagnosis, clinicHistory) {
+    this.passport = passport;
     this.name = name;
     this.surname = surname;
-    this.age = age;
-    this.passport = passport;
-     this.adress = adress;
+    this.age = parseInt(age);
+    this.adress = adress;
     this.meds = meds;
-    this.medsnumber = medsnumber;
+    this.medsNumber = medsNumber;
     this.diagnosis = diagnosis;
-    this.clinichistory = clinichistory;
+    this.clinicHistory = clinicHistory;
     }
-    
-const name = prompt("Ingrese NOMBRE del paciente:");
-const surname = prompt("Ingrese APELLIDO del paciente:");
-const age = parseInt(prompt("Ingrese EDAD del paciente:"));
-const passport = parseInt(prompt("Ingrese NÚMERO DE DNI del paciente:"));
-const adress = prompt("Ingrese DOMICILIO del paciente:");
-const meds = prompt("Ingrese OBRA SOCIAL del paciente:");
-const medsnumber = prompt("Ingrese NÚMERO DE OBRA SOCIAL del paciente:");
-const diagnosis = prompt("Ingrese DIAGNÓSTICO del paciente:");
-const clinichistory = prompt("Ingrese HISTORIA CLÍNICA del paciente:");
+}
 
-let paciente1 = new Paciente (name, surname, age, passport, adress, meds, medsnumber, diagnosis, clinichistory);
+const arrayPacientes = [];
+do{
+    var entradaDNI = prompt("Ingrese el número de DNI del paciente para nuevo registro o pulse 'esc' para terminar.");
+    if (entradaDNI === "esc" || entradaDNI === "ESC" || entradaDNI === "Esc"){
+        break;   
+    }else{
+        dniP = entradaDNI;
+        var nombreP = prompt("Ingrese nombre del paciente:");
+        var apellidoP = prompt("Ingrese apellido del paciente:");
+        var edadP = prompt("Ingrese edad del paciente:");
+        var direccionP= prompt("Ingrese dirección del paciente:");
+        var obraSocialP  = prompt("Ingrese obra social del paciente:");
+        var obraSocialNumeroP = prompt("Ingrese n° de afiliadx del paciente:");
+        var diagnosticoP= prompt("Ingrese sigla o código del diagnóstico del paciente:");
+        var historiaClinicaP = prompt("Ingrese historia clínica del paciente:");
+        arrayPacientes.push(new Paciente(dniP, nombreP, apellidoP, edadP, direccionP, obraSocialP, obraSocialNumeroP, diagnosticoP, historiaClinicaP));
+    }
+} 
+while (entradaDNI != "esc" || entradaDNI != "ESC" || entradaDNI != "Esc")
+console.log(arrayPacientes);
 
-console.log("name" in paciente1);
-console.log("surname" in paciente1);
-console.log("age" in paciente1);
-console.log("passport" in paciente1);
-console.log("adress" in paciente1);
-console.log("meds" in paciente1);
-console.log("medsnumber" in paciente1);
-console.log("diagnosis" in paciente1);
-console.log("clinichistory" in paciente1);
-console.log(paciente1);
+for (var paciente of arrayPacientes){
+    document.write("<ul><li><h3>DNI: " + paciente.passport + "</h3></li>");
+    document.write("<ul><li><h3>Nombre: " + paciente.name + "</h3></li>");
+    document.write("<ul><li><h3>Apellido: " + paciente.surname + "</h3></li>");
+    document.write("<ul><li><h3>Edad: " + paciente.age + "</h3></li>");
+    document.write("<ul><li><h3>Dirección: " + paciente.adress + "</h3></li>");
+    document.write("<ul><li><h3>Obra Social: " + paciente.meds + "</h3></li>");
+    document.write("<ul><li><h3>N° de afiliadx: " + paciente.medsNumber + "</h3></li>");
+    document.write("<ul><li><h3>Sigla o código del diagnóstico: " + paciente.diagnosis + "</h3></li>");
+    document.write("<ul><li><h3>Historia clínica: " + paciente.clinicHistory + "</h3></li>");
+}
+console.log(paciente.passport);
+console.log(paciente.name);
+console.log(paciente.surname);
+console.log(paciente.age);
+console.log(paciente.adress);
+console.log(paciente.meds);
+console.log(paciente.medsNumber);
+console.log(paciente.diagnosis);
+console.log(paciente.clinicHistory);
 
-document.getElementById("name").innerHTML = paciente1.name;
-document.getElementById("surname").innerHTML = paciente1.surname;
-document.getElementById("age").innerHTML =  paciente1.age;
-document.getElementById("passport").innerHTML =  paciente1.passport;
-document.getElementById("adress").innerHTML = paciente1.adress;
-document.getElementById("meds").innerHTML = paciente1.meds;
-document.getElementById("medsnumber").innerHTML =  paciente1.medsnumber;
-document.getElementById("diagnosis").innerHTML =  paciente1.diagnosis;
-document.getElementById("clinichistory").innerHTML =  paciente1.clinichistory;
+
+
+ /**
+ * @challenge: Primera entrega del proyecto final
+ * 
+ * @version: 1.8.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 3/12/22021
+ *
+ * History:
+ *  - v1.8.0 – Primera entrega 
+ */
