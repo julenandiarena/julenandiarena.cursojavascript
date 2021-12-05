@@ -148,7 +148,7 @@ alert("El valor individual de las patentes de su auto es $" + valorPatentesIndiv
  * @fecha: 2/1/22021
  *
  * History:
- *  - v1.5.0 – Primera entrega 
+ *  - v1.5.0 – Primera entrega (Aprobada)
  */
 
 function profesional(){
@@ -224,7 +224,7 @@ document.getElementById("clinicHistory").innerHTML =  paciente1.clinicHistory;
  * @fecha: 3/12/22021
  *
  * History:
- *  - v1.6.0 – Primera entrega 
+ *  - v1.6.0 – Primera entrega (Aprobada)
  */
  class Paciente{
     constructor(name, surname, age, diagnosis) {
@@ -278,7 +278,7 @@ document.write("<h3> Lista de Pacientes ordenados por edad de menor a mayor: </h
  * @fecha: 3/12/22021
  *
  * History:
- *  - v1.7.0 – Primera entrega 
+ *  - v1.7.0 – Primera entrega (Aprobada)
  */
  function profesional(){
     let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
@@ -363,7 +363,7 @@ console.log(paciente.clinicHistory);
  * 
  * @version: 1.8.0
  * @author: Julen Tavo Andiarena Lattes
- * @fecha: 3/12/22021
+ * @fecha: 5/12/22021
  *
  * History:
  *  - v1.8.0 – Primera entrega 
