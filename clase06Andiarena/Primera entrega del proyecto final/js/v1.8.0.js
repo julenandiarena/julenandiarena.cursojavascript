@@ -1,6 +1,4 @@
 //COSAS A AGREGAR O CORREGIR PARA LA PRIMERA ENTREGA DEL PROYECTO FINAL:
-//UNO: Función profesional, hacerla array de objeto donde se guarden los admitidos.
-//DOS: *) entradaNombre === "esc" || entradaNombre === "ESC" || entradaNombre === "Esc"... resolver usando el metodo de string, toLowerCase().
 //TRES: ordenadosEdad = arrayPacientes; aca podrias haber usado spread operetor:[...arraypacientes].
 //CUATRO: Que ordene les pacientes por apellido en orden alfábetico, no por edad.
 
@@ -8,7 +6,8 @@ const registeredProfessionals = [
     {name: "Juan Pérez", numberID: "12345678"},
     {name: "María López", numberID: "87654321"},
     {name: "Susana Suárez", numberID: "11111111"}
-] //Array de objetos donde se guardan los usuarios admitidos para el ingreso.
+] 
+//Array de objetos donde se guardan los usuarios admitidos para el ingreso.
 
 let iterador = function(elementos){ //Esta es una función creadora de un objeto iterable
     this.elementos = elementos; //Elemento a iterar
@@ -35,9 +34,18 @@ while(paraIterar.hayOtroElemento()){ //Define que si hay otro elemento se ejecut
     console.log(elemento)//Para ver los elementos
 }
 
-let leDamosAcceso = false;
-let enterUser = prompt("Ingrese su número de documento"); //Ver tema logueo
+let leDamosAcceso = true;
 
+do{
+    let enterUser = prompt("Bienvenido/a al área de nuevos ingresos de CASL. Por favor, escriba su número de documento:"); //Ver tema logueo
+    registeredProfessionals.forEach(element => {
+        if(element.numberID == enterUser){
+            leDamosAcceso = false
+        }
+    });
+}while(leDamosAcceso)
+
+/*
 do{
     let elemento = paraIterar.siguiente();
     
@@ -55,6 +63,7 @@ do{
 }while(paraIterar.hayOtroElemento())
 
 console.log(leDamosAcceso)
+*/
 
 class Paciente{
     constructor(passport, name, surname, age, adress, meds, medsNumber, diagnosis, clinicHistory) {
@@ -72,44 +81,46 @@ class Paciente{
 
 const arrayPacientes = [];
 do{
-    let entradaDNI = prompt("Ingrese el número de DNI del paciente para nuevo registro o pulse 'esc' para terminar.");
-    if (entradaDNI === "esc" || entradaDNI === "ESC" || entradaDNI === "Esc"){
-        console.log("escape")
+    var entradaDNI = prompt("Ingrese el número de DNI del paciente para nuevo registro o pulse 'ok' para terminar.");
+    if (entradaDNI === "ok" || entradaDNI === "OK" || entradaDNI === "Ok"){
         break;   
     }else{
-        dniPac = entradaDNI;
-        let nombrePac = prompt("Ingrese nombre del paciente:");
-        let apellidoPac = prompt("Ingrese apellido del paciente:");
-        let edadPac = prompt("Ingrese edad del paciente:");
-        let direccionPac= prompt("Ingrese dirección del paciente:");
-        let obraSocialPac  = prompt("Ingrese obra social del paciente:");
-        let obraSocialNumeroPac = prompt("Ingrese n° de afiliadx del paciente:");
-        let diagnosticoPac= prompt("Ingrese sigla o código del diagnóstico del paciente:");
-        let historiaClinicaPac = prompt("Ingrese historia clínica del paciente:");
-        arrayPacientes.push(new Paciente(dniPac, nombrePac, apellidoPac, edadPac, direccionPac, obraSocialPac, obraSocialNumeroPac, diagnosticoPac, historiaClinicaPac));
+        dniP = entradaDNI;
+        let nombreP = prompt("Ingrese nombre del paciente:");
+        let apellidoP = prompt("Ingrese apellido del paciente:");
+        let edadP = parseInt(prompt("Ingrese edad del paciente:"));
+        let direccionP= prompt("Ingrese dirección del paciente:");
+        let obraSocialP  = prompt("Ingrese obra social del paciente:");
+        let obraSocialNumeroP = prompt("Ingrese n° de afiliadx del paciente:");
+        let diagnosticoP= prompt("Ingrese sigla o código del diagnóstico del paciente:");
+        let historiaClinicaP = prompt("Ingrese historia clínica del paciente:");
+        arrayPacientes.push(new Paciente(dniP, nombreP, apellidoP, edadP, direccionP, obraSocialP, obraSocialNumeroP, diagnosticoP, historiaClinicaP));
     }
 } 
-while (entradaDNI = String)
+while (entradaDNI != "ok" || entradaDNI != "OK" || entradaDNI != "Ok")
 console.log(arrayPacientes);
 
-let ordenarApellidos = [...arrayPacientes];
-ordenarApellidos = arrayPacientes.map(surname => surname);
-ordenarApellidos = arrayPacientes;
-ordenarApellidos.sort(function(a, b){return (a.type < b.type) ? -1 : 1})
-console.log("Ordenados por Apellido en orden alfabético:");
-console.log(ordenarApellidos);
-document.write("<h3> Lista de Pacientes ordenados alfabéticamente por apellido: </h3>");
+let ordenadosEdad = [];
+ordenadosEdad = arrayPacientes.map(age => age);
+ordenadosEdad = arrayPacientes;
+ordenadosEdad.sort(function(a, b){
+    return a.age - b.age;
+});
+console.log("Ordenados por Edad de menor a mayor:");
+console.log(ordenadosEdad);
+document.write("<h3> Lista de Pacientes ordenados por edad de menor a mayor: </h3>");
 
 for (let paciente of arrayPacientes){
-    document.write("<ul><li><h3>DNI: " + paciente.passport + "</h3></li>");
-    document.write("<ul><li><h3>Nombre: " + paciente.name + "</h3></li>");
-    document.write("<ul><li><h3>Apellido: " + paciente.surname + "</h3></li>");
-    document.write("<ul><li><h3>Edad: " + paciente.age + "</h3></li>");
-    document.write("<ul><li><h3>Dirección: " + paciente.adress + "</h3></li>");
-    document.write("<ul><li><h3>Obra Social: " + paciente.meds + "</h3></li>");
-    document.write("<ul><li><h3>N° de afiliadx: " + paciente.medsNumber + "</h3></li>");
-    document.write("<ul><li><h3>Sigla o código del diagnóstico: " + paciente.diagnosis + "</h3></li>");
-    document.write("<ul><li><h3>Historia clínica: " + paciente.clinicHistory + "</h3></li>");
+    document.write(`<li>Edad: ${paciente.age}</li>`);
+    document.write(`<li>DNI: ${paciente.passport}</li>`);
+    document.write(`<li>Nombre: ${paciente.name}</li>`);
+    document.write(`<li>Apellido: ${paciente.surname}</li>`);
+    document.write(`<li>Dirección: ${paciente.adress}</li>`);
+    document.write(`<li>Obra Social: ${paciente.meds}</li>`);
+    document.write(`<li>N° de afiliadx: ${paciente.medsNumber}</li>`);
+    document.write(`<li>Sigla o código del diagnóstico: ${paciente.diagnosis}</li>`);
+    document.write(`<li>Historia clínica: ${paciente.clinicHistory}</li>`);
+    document.write("</br>");
 }
 
 
