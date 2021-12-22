@@ -539,7 +539,7 @@ for (let paciente of arrayPatients){
 
 
 /**
- * @challenge: Incorporar eventos
+ * @challenge: Incorporar eventos y Generar HTML (Desafío complementario)
  * 
  * @version: 1.10.0
  * @author: Julen Tavo Andiarena Lattes
