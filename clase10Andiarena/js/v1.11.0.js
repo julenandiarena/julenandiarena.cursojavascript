@@ -71,6 +71,19 @@ btnMostrar.addEventListener("click", MostrarTodxsPacientes);
 inputDNI.focus(); 
 
 //Crear funciones
+function comprobacion(){
+    for(let i = 0; i <= miFormulario.children.length; i++){
+        console.log(miFormulario.children[i])
+        console.log(typeof miFormulario.children[i].value) 
+        
+        if(typeof miFormulario.children[i].value == "string" && miFormulario.children[i].value == ""){
+            console.log("alerta input vacio!")
+            }
+            console.log(miFormulario.children[i].tagName == "INPUT")
+         }
+
+}
+
 function validarForm(){ 
     dniP = miFormulario.children.value;
     nombreP = miFormulario.children.value;
@@ -97,7 +110,6 @@ function validarForm(){
     }else{
         bandera = true; 
     }
-   
 }
 
 //Función para agregar pacientes al array de pacientes
@@ -127,19 +139,6 @@ function agregarPacientes(e){
     }else{
         inputDNI.focus();
     }
-}
-
-function comprobacion(){
-    for(let i = 0; i <= miFormulario.children.length; i++){
-        console.log(miFormulario.children[i])
-        console.log(typeof miFormulario.children[i].value) 
-        
-        if(typeof miFormulario.children[i].value == "string" && miFormulario.children[i].value == ""){
-            console.log("alerta input vacio!")
-            }
-            console.log(miFormulario.children[i].tagName == "INPUT")
-         }
-
 }
 
 
