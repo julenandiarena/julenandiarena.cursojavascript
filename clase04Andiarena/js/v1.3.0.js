@@ -1,3 +1,14 @@
+/**
+ * @challenge: Simulador interactivo
+ * 
+ * @version: 1.3.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 27/11/2021
+ *
+ * History:
+ *  - v1.3.0 – Primera entrega (Aprobada)
+ */
+
 function profesional(){
 let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
 while(profesional != null && profesional != ""){

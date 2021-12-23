@@ -1,182 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/dashboard/">
-
-    <title>CASL - Web de profesionales</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Segunda entrega Proyecto Final</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-
-  </head>
+</head>
 
 <body>
+    <h1> Segunda Entrega del Proyecto Final del Curso de JavaScript - CoderHouse</h1>
+    <h3> Ingrese los datos del paciente para realizar el nuevo ingreso:</h3>
+    <div id="containerPrincipal">
+        <div>
+            <form id="formulario">
+                <label>N° de DNI:</label>
+                <input class="iText" type="text" name="dni" id="iDNI">
+                <label>Nombre:</label>
+                <input class="iText" type="text" name="nombre" id="iNombre">
+                <label>Apellido:</label>
+                <input class="iText" type="text" name="apellido" id="iApellido">
+                <label>Edad:</label>
+                <input class="iText" type="text" name="edad" id="iEdad">
+                <label>Domicilio:</label>
+                <input class="iText" type="text" name="domicilio" id="iDomicilio">
+                <label>Obra Social:</label>
+                <input class="iText" type="text" name="obraSocial" id="iObraSocial">
+                <label>N° de afiliadx:</label>
+                <input class="iText" type="text" name="afiliadx" id="iAfiliadx">
+                <label>Sigla o código del diagnóstico:</label>
+                <input class="iText" type="text" name="diagnostico" id="iDiagnostico">
+                <label>Historia clínica:</label>
+                <input class="iText" type="text" name="historiaClinica" id="iHistoriaClinica">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">CASL - Web de profesionales</a>
-          </div>
-          <!-- Navbar -->
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#" id="sideBarHome">Nuevo ingreso</a></li>
-              <li><a href="#" id="sideBarTodo">Listado de pacientes</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <body>
-        <!-- Login de usuarios -->
-        <li></li>
-        <li></li>
-        <h1>Ingreso de profesionales
-        </h1> 
-        <form name="login"> 
-          <table width="100%" border="10" bordercolor="#0000FF" cellspacing="10" cellpadding="10"></table>
-               <tr> 
-                 <th scope="row"><h2>Usuario (Apellido sin tildes)</h2></th> 
-                 <td><span class="cnt"> 
-                   <input name="user" type="text" class="Input" value="" size="20" /> 
-                 </span></td> 
-               </tr> 
-               <tr> 
-                 <th height="33" scope="row"><h2>Clave (N° de DNI sin puntos)</h2></th> 
-                 <td><span class="cnt"> 
-                   <input name="password" type="password" class="Input" value="" size="20" /> 
-                 </span></td> 
-                 <td><span class="cnt"> 
-                   <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
-                 </span></td> 
-               </tr> 
-               <tr> 
-               </tr> 
-             </table> 
-        </form> 
-         <!-- Nuevos ingresos -->
-         <div id="todo" class="oculto">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <h2 class="sub-header">Complete la siguiente tabla para realizar el ingreso</h2>
-            <form>
-              <div class="form-group col-xs-12 col-sm-12">
-                <div class="col-sm-10">
-                    <form id="formulario">
-                      <label>N° de DNI:</label>
-                      <input class="iText" type="text" name="dni" id="iDNI">
-                      <div></div>
-                      <label>Nombre:</label>
-                      <input class="iText" type="text" name="nombre" id="iNombre">
-                      <div></div>
-                      <label>Apellido:</label>
-                      <input class="iText" type="text" name="apellido" id="iApellido">
-                      <div></div>
-                      <label>Edad:</label>
-                      <input class="iText" type="text" name="edad" id="iEdad">
-                      <div></div>
-                      <label>Domicilio:</label>
-                      <input class="iText" type="text" name="domicilio" id="iDomicilio">
-                      <div></div>
-                      <label>Obra Social:</label>
-                      <input class="iText" type="text" name="obraSocial" id="iObraSocial">
-                      <div></div>
-                      <label>N° de afiliadx:</label>
-                      <input class="iText" type="text" name="afiliadx" id="iAfiliadx">
-                      <div></div>
-                      <label>Sigla o código del diagnóstico:</label>
-                      <input class="iText" type="text" name="diagnostico" id="iDiagnostico">
-                      <div></div>
-                      <label>Historia clínica:</label>
-                      <input class="iText" type="text" name="historiaClinica" id="iHistoriaClinica">
+                <div id="botones">
+                    <input type="submit" id="btnSubmit" id="" value="Confirmar">
+                    <input type="button" id="btnMostrar" id="" value="Mostrar todxs">
                 </div>
-              </div>
-              <div class="form-group col-xs-12 col-sm-12">
-               
-                <div class="col-sm-10">
-                  <button type="submit" id="btnAddPatient"class="btn btn-success">Ingresar</button>
-                </div>
-              </div>
             </form>
-            <div class="row" >
-              <div id="result" class="col-xs-12 col-sm-12">
-
-              </div>
-            </div>
-          </div>
-
-           <!-- Lista de pacientes ingresadxs -->
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <h2 class="sub-header">
-              Listado de pacientes
-              <span style="font-size:18px;"><a href="#" id="seeTrash">(Ver papelera)</a></span>
-            </h2>
-            
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>N° de DNI</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Edad</th>
-                    <th>Domicilio</th>
-                    <th>Obra Social</th>
-                    <th>N° de afiliadx </th>
-                    <th>Diagnóstico</th>
-                    <th>Historia clínica</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-           <!-- Lista de Papelera -->
-           <div id="trashList" class="oculto">
-            <div class="col-xs-12 col-sm-12">
-              <h2 class="sub-header">
-                <span style="text-align: left;">Papelera de reciclaje</span> 
-                <span style="font-size:18px;"><a href="#" id="clearTrash">(Vaciar Papelera)</a></span>
-                /
-                <span style="font-size:18px;"><a href="#" id="hideTrash">(Ocultar Papelera)</a></span>
-              </h2>
-              
-              <div class="table-responsive">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Todo</th>
-                      <th>Fecha a hacer</th>
-                      <th>Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tableTodoDeleted">
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-           </div>
-          
         </div>
-      </div>
-    </div>
-  </div>
+        <div id="pacienteIngresadx">
+        </div>
+        <div id="displayTodxs">
+        </div>
 
+    </div>
     <script type="text/javascript" src="js/v1.11.0.js"></script>
 </body>
 

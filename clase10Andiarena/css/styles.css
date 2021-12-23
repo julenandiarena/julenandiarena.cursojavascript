@@ -1,6 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: grey;
+    background-color: whitesmoke;
 }
 
 #formulario{
@@ -18,24 +18,15 @@
 }
 
 .iText{
-    background-color: white;
+    background-color: lightyellow;
 }
-
-.Input{
-    background-color: white;
-}
-
-.boton{
-    background-color: white;
-}
-
 
 #botones{
     background-color: lightseagreen;
 }
 
 #btnSubmit, #btnMostrar{
-    background-color: rgb(71, 71, 33);
+    background-color: lightyellow;
     margin-top: 30px;
     width: 100px;
     height: 40px;

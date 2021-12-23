@@ -1,3 +1,14 @@
+/**
+ * @challenge: Crear un algoritmo utilizando un ciclo
+ * 
+ * @version: 1.2.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 24/11/2021
+ *
+ * History:
+ *  - v1.2.0 – Primera entrega (Aprobada)
+ */
+ 
 let profesional = prompt("Por favor ingrese su nombre y apellido");
 while(profesional != "esc"){
     switch (profesional){

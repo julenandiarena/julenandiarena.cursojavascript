@@ -1,3 +1,14 @@
+/**
+ * @challenge: Incorporar objetos
+ * 
+ * @version: 1.5.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 2/1/22021
+ *
+ * History:
+ *  - v1.5.0 – Primera entrega (Aprobada)
+ */
+
 function profesional(){
     let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
     while(profesional != null && profesional != ""){

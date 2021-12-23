@@ -1,3 +1,14 @@
+/**
+ * @challenge: Primera entrega del proyecto final
+ * 
+ * @version: 1.8.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 7/12/22021
+ *
+ * History:
+ *  - v1.8.0 – Primera entrega (Aprobada)
+ */
+
 const registeredProfessionals = [
     {name: "Juan Pérez", numberID: "12345678"},
     {name: "María López", numberID: "11111111"},

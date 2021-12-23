@@ -1,3 +1,14 @@
+/**
+ * @challenge: Funciones relacionadas
+ * 
+ * @version: 1.4.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 27/11/2021
+ *
+ * History:
+ *  - v1.4.0 – Primera entrega (Aprobada)
+ */
+
 const multiplicar = (a, b) => a * b;
 const restar = (a, b) => a - b;
 const descontar = (a, b) => multiplicar(a, b) / 100;

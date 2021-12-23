@@ -1,3 +1,14 @@
+/**
+ * @challenge: Ordenar un array de objetos (Desafío complementario)
+ * 
+ * @version: 1.6.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 3/12/22021
+ *
+ * History:
+ *  - v1.6.0 – Primera entrega (Aprobada)
+ */
+
 class Paciente{
     constructor(name, surname, age, diagnosis) {
     this.name = name;

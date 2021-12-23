@@ -1,3 +1,14 @@
+/**
+ * @challenge: Crear un algoritmo con un condicional
+ * 
+ * @version: 1.1.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 21/11/2021
+ *
+ * History:
+ *  - v1.1.0 – Primera entrega (Aprobada)
+ */
+
 /* En esta ocasión, mejorando lo pensado para el desafío anterior, se le solicita al usuario ingresar apellido y nombre para poder acceder a la web. 
 Si su apellido y nombre son true se le habilita el acceso.
 */

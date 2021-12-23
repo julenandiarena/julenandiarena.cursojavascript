@@ -1,3 +1,14 @@
+/**
+ * @challenge: Incorporar arrays
+ * 
+ * @version: 1.7.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 3/12/22021
+ *
+ * History:
+ *  - v1.7.0 – Primera entrega (Aprobada)
+ */
+
 function profesional(){
     let profesional = parseInt(prompt("Por favor ingrese su número de DNI"));
     while(profesional != null && profesional != ""){

@@ -1,3 +1,14 @@
+/**
+ * @challenge: Incorporar eventos y Generar HTML (Desafío complementario)
+ * 
+ * @version: 1.10.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 20/12/2021
+ *
+ * History:
+ *  - v1.10.0 – Primera entrega (Aprobada)
+ */
+
 //Crear array de objetos de los profesionales registrados
 const registeredProfessionals = [
     {name: "Juan Pérez", numberID: "12345678"},

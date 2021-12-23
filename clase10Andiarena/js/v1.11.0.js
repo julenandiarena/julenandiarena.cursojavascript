@@ -1,21 +1,13 @@
-/*
-function Login(){ 
-let done=0; 
-let user=document.login.user.value; 
-let password=document.login.password.value; 
-if (user=="Perez" && password=="12345678") { 
-document.write("Acceso aprobado"); 
-} 
-if (user=="Lopez" && password=="11111111") { 
-window.location="TU_PAGINA_WEB.HTML"; 
-} 
-if (user=="Suarez" && password=="22222222") { 
-    window.location="TU_PAGINA_WEB.HTML"; 
-} 
-if (user=="" && password=="") { 
-window.location="errorpopup.html"; 
-} 
-} 
+/**
+ * @challenge: Segunda entrega del Proyecto Final
+ * @version: 1.11.0
+ * @author: Julen Tavo Andiarena Lattes
+ * @fecha: 28/12/2021
+ *
+ * History:
+ *  - v1.11.0 – Primera entrega
+ */
+
 
 //Crear array de objetos de los profesionales registrados
 const registeredProfessionals = [
@@ -28,7 +20,7 @@ const registeredProfessionals = [
 let getAccess = true;
  
 do{
-    let enterUser = prompt("Bienvenido/a al área de nuevos ingresos de CASL. Por favor, escriba su número de documento:"); //Ver tema logueo
+    let enterUser = prompt("Bienvenido/a al área de nuevos ingresos de CASL. Por favor, escriba su número de documento:"); //Este prompt hay que sacarlo
     registeredProfessionals.forEach(element => {
         if(element.numberID == enterUser){
             getAccess = false
@@ -36,7 +28,7 @@ do{
         }
     });
 }while(getAccess) 
-*/
+
 //Crear la clase constructora de unx paciente
 class Paciente{
     constructor(passport, name, surname, age, adress, meds, medsNumber, diagnosis, clinicHistory){
@@ -57,15 +49,15 @@ let arrayPacientes = [];
 let miFormulario = document.querySelector("#formulario"); 
 let inputDNI = document.querySelector("#iDNI"); 
 
-let dniP = miFormulario.children[1].value; 
-let nombreP = miFormulario.children[3].value; 
-let apellidoP = miFormulario.children[5].value; 
-let edadP = miFormulario.children[7].value; 
-let direccionP = miFormulario.children[9].value; 
-let obraSocialP = miFormulario.children[11].value; 
-let numeroObraSocialP = miFormulario.children[13].value;
-let diagnosticoP = miFormulario.children[15].value; 
-let historiaClinicaP = miFormulario.children[17].value; 
+let dniP = miFormulario.children.value; 
+let nombreP = miFormulario.children.value; 
+let apellidoP = miFormulario.children.value; 
+let edadP = miFormulario.children.value; 
+let direccionP = miFormulario.children.value; 
+let obraSocialP = miFormulario.children.value; 
+let numeroObraSocialP = miFormulario.children.value;
+let diagnosticoP = miFormulario.children.value; 
+let historiaClinicaP = miFormulario.children.value; 
 
 let contenedor = document.querySelector("#pacienteIngresadx");
 let displayTodxs = document.querySelector("#displayTodxs"); 
@@ -80,15 +72,15 @@ inputDNI.focus();
 
 //Crear funciones
 function validarForm(){ 
-    dniP = miFormulario.children[1].value;
-    nombreP = miFormulario.children[3].value;
-    apellidoP = miFormulario.children[5].value;
-    edadP = miFormulario.children[7].value;
-    direccionP = miFormulario.children[9].value;
-    obraSocialP = miFormulario.children[11].value;
-    numeroObraSocialP = miFormulario.children[13].value;
-    diagnosticoP = miFormulario.children[15].value;
-    historiaClinicaP = miFormulario.children[17].value;
+    dniP = miFormulario.children.value;
+    nombreP = miFormulario.children.value;
+    apellidoP = miFormulario.children.value;
+    edadP = miFormulario.children.value;
+    direccionP = miFormulario.children.value;
+    obraSocialP = miFormulario.children.value;
+    numeroObraSocialP = miFormulario.children.value;
+    diagnosticoP = miFormulario.children.value;
+    historiaClinicaP = miFormulario.children.value;
     console.log(dniP);
     console.log(nombreP);
     console.log(apellidoP);
@@ -99,7 +91,7 @@ function validarForm(){
     console.log(diagnosticoP);
     console.log(historiaClinicaP); 
     if(dniP == "" || nombreP == "" || apellidoP == "" || edadP == "" || direccionP == "" || obraSocialP == "" || numeroObraSocialP == "" || diagnosticoP == "" || historiaClinicaP == "" ){
-        alert("ERROR");
+        alert("ERROR"); //Este alert hay que sacarlo
         inputDNI.focus();
         bandera = false;
     }else{
@@ -118,17 +110,17 @@ function agregarPacientes(e){
             let formulario = e.target 
             arrayPacientes.push(new Paciente(dniP, nombreP, apellidoP, edadP, direccionP, obraSocialP, numeroObraSocialP, diagnosticoP, historiaClinicaP)); 
         }else{ 
-            alert("No se agregará al paciente"); 
+            alert("No se agregará al paciente"); //Este alert hay que sacarlo
         } 
-        miFormulario.children[1].value = "";
-        miFormulario.children[3].value = "";
-        miFormulario.children[5].value = "";
-        miFormulario.children[7].value = "";
-        miFormulario.children[9].value = "";
-        miFormulario.children[11].value = "";
-        miFormulario.children[13].value = "";
-        miFormulario.children[15].value = "";
-        miFormulario.children[17].value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
+        miFormulario.children.value = "";
         contenedor.innerHTML = "";
         AgregarAlDom(); 
         inputDNI.focus(); 
@@ -136,6 +128,20 @@ function agregarPacientes(e){
         inputDNI.focus();
     }
 }
+
+function comprobacion(){
+    for(let i = 0; i <= miFormulario.children.length; i++){
+        console.log(miFormulario.children[i])
+        console.log(typeof miFormulario.children[i].value) 
+        
+        if(typeof miFormulario.children[i].value == "string" && miFormulario.children[i].value == ""){
+            console.log("alerta input vacio!")
+            }
+            console.log(miFormulario.children[i].tagName == "INPUT")
+         }
+
+}
+
 
 //funcion para mostrar en DOM el últimx paciente ingresadx
 function AgregarAlDom(){ 
@@ -153,27 +159,7 @@ function AgregarAlDom(){
 } 
 
 // Función para mostrar proceduralmente todos lxs pacientes en un div en DOM
-/*
-function MostrarTodxsPacientes(e){ 
-    e.preventDefault(); 
-    let i = 0; 
-    displayTodxs.innerHTML = "<h3> Listado de todxs lxs pacientes:</h3>"; 
-    for (const paciente of arrayPacientes){
-        displayTodxs.innerHTML += ` 
-        <p><strong> DNI: </strong> ${dniP}</p>
-    <p><strong> Nombre: </strong> ${nombreP}</p>
-    <p><strong> Apellido: </strong> ${apellidoP}</p>
-    <p><strong> DNI: </strong> ${dniP}</p>
-    <p><strong> Edad: </strong> ${edadP}</p>
-    <p><strong> Dirección: </strong> ${direccionP}</p>
-    <p><strong> Obra Social: </strong> ${obraSocialP}</p>
-    <p><strong> N° de afiliadx de Obra Social: </strong> ${numeroObraSocialP}</p>
-    <p><strong> Diagnóstico: </strong> ${diagnosticoP}</p>
-    <p><strong> Historia clínica: </strong> ${historiaClinicaP}</p>
-    <hr>`;
-    } 
-}
-*/
+
 function MostrarTodxsPacientes(e){ 
     e.preventDefault(); 
     let i = 0; 
@@ -192,3 +178,5 @@ function MostrarTodxsPacientes(e){
         document.body.appendChild(contenedor);
     }
 }
+
+//Hay que parsear los datos de los pacientes a JSON y guardarlos en el LocalStorage
