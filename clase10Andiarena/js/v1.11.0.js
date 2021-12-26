@@ -10,6 +10,7 @@
 
 
 //Crear array de objetos de los profesionales registrados
+/*
 const registeredProfessionals = [
     {name: "Juan Pérez", numberID: "12345678"},
     {name: "María López", numberID: "11111111"},
@@ -28,7 +29,7 @@ do{
         }
     });
 }while(getAccess) 
-
+*/
 //Crear la clase constructora de unx paciente
 class Paciente{
     constructor(passport, name, surname, age, adress, meds, medsNumber, diagnosis, clinicHistory){
@@ -71,18 +72,6 @@ btnMostrar.addEventListener("click", MostrarTodxsPacientes);
 inputDNI.focus(); 
 
 //Crear funciones
-function comprobacion(){
-    for(let i = 0; i <= miFormulario.children.length; i++){
-        console.log(miFormulario.children[i])
-        console.log(typeof miFormulario.children[i].value) 
-        
-        if(typeof miFormulario.children[i].value == "string" && miFormulario.children[i].value == ""){
-            console.log("alerta input vacio!")
-            }
-            console.log(miFormulario.children[i].tagName == "INPUT")
-         }
-
-}
 
 function validarForm(){ 
     dniP = miFormulario.children.value;
@@ -112,17 +101,38 @@ function validarForm(){
     }
 }
 
+function comprobacion(){
+    for(let i = 0; i <= miFormulario.children.length; i++){
+        console.log(miFormulario.children[i])
+        console.log(typeof miFormulario.children[i].value) 
+        
+        if(typeof miFormulario.children[i].value == "string" && miFormulario.children[i].value == ""){
+            console.log("alerta input vacio!")
+            }
+            console.log(miFormulario.children[i].tagName == "INPUT")
+         }
+
+}
+
 //Función para agregar pacientes al array de pacientes
 function agregarPacientes(e){ 
     e.preventDefault(); 
     validarForm(); 
     if (bandera == true){
         let opcion = confirm("¿Está segurx que desea agregar al Paciente?");
-        if (opcion == true){ 
+        let respuestaPacienteAgregadx = document.getElementById("button1");
+        respuestaPacienteAgregadx.onclick = function (){
+            let h6 = document.createElement("h6");
+            h6.innerHTML = "Paciente ingresadx con éxito";
+            document.body.appendChild(h6);
+        }
+       if (opcion == true){ 
             let formulario = e.target 
             arrayPacientes.push(new Paciente(dniP, nombreP, apellidoP, edadP, direccionP, obraSocialP, numeroObraSocialP, diagnosticoP, historiaClinicaP)); 
         }else{ 
-            alert("No se agregará al paciente"); //Este alert hay que sacarlo
+            let h6 = document.createElement("h6");
+            h6.innerHTML = "No se agregará al paciente";
+            document.body.appendChild(h6); //Este alert hay que sacarlo
         } 
         miFormulario.children.value = "";
         miFormulario.children.value = "";
@@ -136,10 +146,9 @@ function agregarPacientes(e){
         contenedor.innerHTML = "";
         AgregarAlDom(); 
         inputDNI.focus(); 
-    }else{
-        inputDNI.focus();
     }
 }
+document.body.appendChild(h5);
 
 
 //funcion para mostrar en DOM el últimx paciente ingresadx
