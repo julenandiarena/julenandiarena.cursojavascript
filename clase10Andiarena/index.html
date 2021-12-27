@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Segunda entrega Proyecto Final</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-</head>
+    <!DOCTYPE html>
+    <html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Segunda entrega Proyecto Final</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    
+    <body>
+        <h1> Segunda Entrega del Proyecto Final del Curso de JavaScript - CoderHouse</h1>
+        <div id="containerProfesionales" class="oculto"></div>
+    <form name="login"> 
+           <tr> 
+             <th scope="row"><h3>Ingrese su DNI sin puntos para el acceso</h3></th> 
+             <td><span class="cnt"> 
+               <input name="user" type="text" class="Input" value="" size="20" /> 
+             </span></td> 
+           </tr> 
+           <tr> 
+            <button id="button1" class="btn btn-primary">Ingresar</button>
+           </tr> 
+           <tr> 
+             <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Borrar" class="boton" /></th> 
+           </tr> 
+         </table> 
+    </form> 
 
-<body>
-    <h1> Segunda Entrega del Proyecto Final del Curso de JavaScript - CoderHouse</h1>
-    <h3> Ingrese los datos del paciente para realizar el nuevo ingreso:</h3>
-    <div id="containerPrincipal">
-        <div>
-            <form id="formulario">
-                <label>N° de DNI:</label>
-                <input class="iText" type="text" name="dni" id="iDNI">
-                <label>Nombre:</label>
-                <input class="iText" type="text" name="nombre" id="iNombre">
-                <label>Apellido:</label>
-                <input class="iText" type="text" name="apellido" id="iApellido">
-                <label>Edad:</label>
-                <input class="iText" type="text" name="edad" id="iEdad">
-                <label>Domicilio:</label>
-                <input class="iText" type="text" name="domicilio" id="iDomicilio">
-                <label>Obra Social:</label>
-                <input class="iText" type="text" name="obraSocial" id="iObraSocial">
-                <label>N° de afiliadx:</label>
-                <input class="iText" type="text" name="afiliadx" id="iAfiliadx">
-                <label>Sigla o código del diagnóstico:</label>
-                <input class="iText" type="text" name="diagnostico" id="iDiagnostico">
-                <label>Historia clínica:</label>
-                <input class="iText" type="text" name="historiaClinica" id="iHistoriaClinica">
-
-                <div id="botones">
-                    <button id="button1" class="btn btn-primary">Confirmar</button>
-                    <input type="button" id="btnMostrar" id="" value="Mostrar todxs">
-                </div>
-            </form>
+        <h3> Ingrese los datos del paciente para realizar el nuevo ingreso:</h3>
+        <div id="containerPrincipal">
+            <div>
+                <form id="formulario">
+                    <label>N° de DNI:</label>
+                    <input class="iText" type="text" name="dni" id="iDNI">
+                    <label>Nombre:</label>
+                    <input class="iText" type="text" name="nombre" id="iNombre">
+                    <label>Apellido:</label>
+                    <input class="iText" type="text" name="apellido" id="iApellido">
+                    <label>Edad:</label>
+                    <input class="iText" type="text" name="edad" id="iEdad">
+                    <label>Domicilio:</label>
+                    <input class="iText" type="text" name="domicilio" id="iDomicilio">
+                    <label>Obra Social:</label>
+                    <input class="iText" type="text" name="obraSocial" id="iObraSocial">
+                    <label>N° de afiliadx:</label>
+                    <input class="iText" type="text" name="afiliadx" id="iAfiliadx">
+                    <label>Sigla o código del diagnóstico:</label>
+                    <input class="iText" type="text" name="diagnostico" id="iDiagnostico">
+                    <label>Historia clínica:</label>
+                    <input class="iText" type="text" name="historiaClinica" id="iHistoriaClinica">
+    
+                    <div id="botones">
+                        <button id="button1" class="btn btn-primary">Confirmar</button>
+                        <input type="button" id="btnMostrar" id="" value="Mostrar todxs">
+                    </div>
+                </form>
+            </div>
+            <div id="pacienteIngresadx">
+            </div>
+            <div id="displayTodxs">
+            </div>
+    
         </div>
-        <div id="pacienteIngresadx">
-        </div>
-        <div id="displayTodxs">
-        </div>
-
-    </div>
-    <script type="text/javascript" src="js/v1.11.0.js"></script>
-</body>
-
-</html>
+        <script type="text/javascript" src="js/v1.11.0.js"></script>
+    </body>
+    
+    </html>

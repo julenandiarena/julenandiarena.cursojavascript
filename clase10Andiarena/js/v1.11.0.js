@@ -10,14 +10,14 @@
 
 
 //Crear array de objetos de los profesionales registrados
-/*
+
 const registeredProfessionals = [
     {name: "Juan Pérez", numberID: "12345678"},
     {name: "María López", numberID: "11111111"},
     {name: "Susana Suárez", numberID: "22222222"}
 ]
-
 //Dar acceso sólo a quienes pertenecen al array de objetos anterior
+/*
 let getAccess = true;
  
 do{
@@ -30,6 +30,7 @@ do{
     });
 }while(getAccess) 
 */
+
 //Crear la clase constructora de unx paciente
 class Paciente{
     constructor(passport, name, surname, age, adress, meds, medsNumber, diagnosis, clinicHistory){
@@ -188,3 +189,8 @@ function MostrarTodxsPacientes(e){
 }
 
 //Hay que parsear los datos de los pacientes a JSON y guardarlos en el LocalStorage
+
+//Almacenar Array de Objetos en el Local Storage a través de JSON
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor);
+}
+guardarLocal("listaPacientes", JSON.stringify(arrayPacientes));
